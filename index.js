@@ -13,13 +13,14 @@ const db = mongoose.createConnection(
 
 // Schema for users of app
 const challengeSchema = new mongoose.Schema({
+  model: String,
   id: String,
   name: String,
   sp: Number,
   xp: Number,
   goal: Object,
   short_description: String,
-  full_description: String,
+  long_description: String,
 });
 const Challenge = db.model("Challenge", challengeSchema, "challenges");
 
